@@ -1,0 +1,16 @@
+{% extends 'analysis/base.html' %}
+
+{% block title%}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h2 style="text-align: center;">Prostate Analysis</h2>
+        <hr>
+        <a href="{% url 'prediction' %}" type="button" class="btn btn-block btn-success">Get Started</a>
+    </div>
+</div>
+{% endblock %}

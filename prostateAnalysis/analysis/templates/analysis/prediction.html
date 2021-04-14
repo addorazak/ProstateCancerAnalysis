@@ -1,0 +1,54 @@
+{% extends 'analysis/base.html' %}
+
+{% block title%}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <p>
+            <h2 style="text-align: center;">Prostate Analysis</h2>
+        </p>
+        <hr>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Prostate Analysis</h4>
+                <p class="card-text">This tool analyzes a prostate MRI scan to determine the probability that the prostate is cancerous</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <b>Upload Session</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Special Image Analysis</h5>
+                    <p class="card-text">The image you upload will be analyzed extensively to determine the whether the prostate is cancerous or not.</p>
+                    <form onsubmit = "return submitData(event)" >
+                        <input type="file" name="fileToUpload" id="fileToUpload" accept = "image/*" required>
+                        <hr>
+                        <input type="submit" class="btn btn-primary" value="Upload Image" name="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">
+                    <b>Results Session</b>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cancer Status:</h5>
+                    <p id="results-text" class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
